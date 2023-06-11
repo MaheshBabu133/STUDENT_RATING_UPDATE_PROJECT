@@ -48,4 +48,4 @@ class StudentRating(models.Model):
     coding=models.CharField(max_length=100)
     theory=models.CharField(max_length=100)
     comminication=models.CharField(max_length=100)
-    ["cname","coding",""]
+    
