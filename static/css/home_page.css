@@ -1,0 +1,130 @@
+
+
+#one /* h1 */
+{
+    background-color: rgb(202, 230, 230);
+    color: rgb(49, 4, 252);
+    font-size: 50px;
+    margin: 0px;
+    padding: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    opacity: 60%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#two   /*header*/
+{
+    background-color: rgb(255, 188, 188);
+    padding: 20px;
+    opacity: 70%;
+}
+
+#three /* span */
+{
+background: rgb(247, 198, 198);
+color: rgb(22, 22, 231);
+padding: 10px;
+border-radius: 0px 10px 0px 10px;
+border: 2px solid rgb(30, 5, 255);
+margin-top: 20px;
+margin-bottom: 20px;
+font-size: 30px;
+box-shadow: -5px -5px 30px whitesmoke;
+margin-top: 500px;
+}  
+
+div
+{
+    display: inline;
+    width:100%;
+    margin-left: 775px;
+  
+}
+
+.temper /* anchor tag */
+{
+    flex-direction: center;
+    /margin-right: 10px;
+    align-content: center;
+    justify-content: center;
+    opacity: 85%;
+
+}
+
+img
+{
+
+    height:400;
+    width: 500px;
+    border-radius:10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 20px black;
+    opacity: 70%;
+    
+}
+
+
+
+
+.samba
+{
+    background-color: rgb(238, 206, 199) !important;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(220, 2, 2) !important;
+    padding: 50px;
+}
+
+.eleven
+{
+    opacity: 80%;
+    background-color: aqua;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(4, 12, 255);
+}
+
+.my
+{
+    margin-left: 100px;
+    opacity:100%;
+    font-size: 30px;
+    color: aqua;
+    padding:20px;
+
+}
+.spantag
+{
+    color:whitesmoke;
+    font-size: 30px;
+    margin-left: 10px;
+    background-color: black;
+    padding: 10px;
+    opacity: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px whitesmoke;
+
+    
+}
+#courses
+{
+    font-size: 45px;
+}
+
+#contract
+{
+    background: linear-gradient(30deg,black,rgb(205, 9, 9));
+    display: inline;
+    border-radius: 0px 20px 0px 20px;
+    color: whitesmoke;
+    padding: 10px;
+    border: 2px solid whitesmoke;
+    box-shadow: 0px 0px 10px whitesmoke;
+}
+
+
+

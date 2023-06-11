@@ -1,0 +1,213 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% if user.username == 'Harshad' %}
+  <title>Student Rating Update</title>
+  {% else %}
+  <title>Student Details Form</title>
+  {% endif %}
+
+    
+
+
+    <link rel="stylesheet" href="{% static 'css/mypython.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+
+  <style>
+    body
+{
+    margin: 0px;
+    background-image:url('{% static 'images/sdata1.jpg' %}');
+    background-repeat:no-repeat;
+	background-size:cover;
+	background-position:0px 0px ;
+	background-attachment:fixed;
+}
+
+
+
+    #update
+    {
+     border: 2px solid rgb(249, 249, 249);
+     width: 320px;
+     background-color:transparent;
+     border-radius:10px;
+     margin-left:600px ;
+     box-shadow:0px 0px 20px black ;
+
+
+    }
+    label
+    {
+      color: rgb(253, 254, 255);
+      font-size: 30px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    header
+    {
+      justify-content: flex-end;
+    }
+    select,#username,input
+    {
+      color: rgb(255, 255, 255);
+      font-size:20px;
+      font-family: cursive;
+      
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      padding:10px;
+      background-color: transparent;
+      background-color: rgb(37, 55, 55);
+      opacity: 50%;
+      width: 300px;
+      border-radius: 10px;
+      margin-left: 5px;
+    }
+    .optiontag
+    {
+      color: rgb(255, 215, 215);
+    }
+    #formdiv
+    {
+      width: 300px;
+      border: 2px solid;
+    }
+    .one
+    {
+      margin-left: 50px;
+    }
+    #one
+    {
+      background-color: antiquewhite;
+      color: blue;
+
+    }
+     #display
+     {
+      margin-left:50px ;
+     }
+
+
+     .tata
+     {
+      color: rgb(43, 0, 255);
+      background-color: aliceblue;
+     }
+#display
+{
+background:linear-gradient(30deg,rgb(0, 0, 0),red);
+color:aliceblue;
+font-size: 20px;
+padding:3px;
+border: 2px solid white;
+border-radius: 0px 20px 0px 20px;
+width: 200px;
+box-shadow: 0px 0px 20px rgb(79, 73, 73);
+margin-bottom: 30px;
+opacity: 100;
+}
+.activedata
+{
+  color: black;
+}
+  </style>
+
+
+</head>
+<body>
+  <header id="two"  style="background-color: rgb(218, 218, 237); opacity:50% !important;">
+    <span id="three">J spiders institute</span>
+     <div id="anchortags">
+
+      {% if user.username == 'Harshad' %}
+      <a href="{% url 'admin:index' %}" class=" one btn btn-dark">Admin</a> 
+      <a href="{% url 'user_logout' %}" class=" one btn btn-dark">Logout</a>
+    
+      {% else %}   
+     <a href="{% url 'user_logout' %}" class=" one btn btn-dark">Logout</a>
+     {% endif %}
+          </div>
+ </header>
+ <center><h1 id="one">Welcome  mr/ms {{username}}</h1></center>
+{% if user.username == 'Harshad' %}
+  <div id="formdiv">
+  <form action="" method="POST" id="update">
+    {% csrf_token %}
+   
+    <label for="username">Enter Username</label>
+    <input type="text" name="username" id="username" placeholder="Enter StudentName" >
+    <label for="course">Select Your Course:</label>
+    <select name="course" id="course">
+        {% for a in CO %}
+        <option value="{{a}}">{{a.cname}}</option>
+        {% endfor %}
+    </select>
+
+    <label for="coding">Coding rating:</label>
+    <select name="coding" id="coding">
+        {% for a in COD %}
+        <option value="{{a}}">{{a.coding}}</option>
+        {% endfor %}
+    </select>
+    
+
+    
+
+
+    <label for="theory">Theory Rating:</label>
+    <select name="theory" id="theory">
+        {% for a in TO %}
+        <option value="{{a}}">{{a.theory}}</option>
+        {% endfor %}
+    </select>
+
+
+
+
+
+
+
+    <label for="comu">Communication rating:</label>
+    <select name="comu" id="comu">
+        {% for a in CMO %}
+        <option value="{{a}}">{{a.comminication}}</option>
+        {% endfor %}
+    </select>
+
+
+
+
+
+
+
+    <br><br>
+    <input type="submit" id="display" value="Submit">
+  </form>
+  </div>
+
+{% else %}
+
+  <h1 class="tata"><span class="activedata">Name of the Student:</span>{{UFO.username}}</h1>
+  <h1 class="tata"><span class="activedata">Email of the Student:</span>{{UFO.email}}</h1>
+  <h1 class="tata"><span class="activedata">Couse of the Student:</span>{{SFO.cname}}</h1>
+  <h1 class="tata"><span class="activedata">Quaification of the Student:</span>{{SFO.HighestQualification}}</h1>
+  <h1 class="tata"><span class="activedata">YOP of the Student:</span>{{SFO.YOP}}</h1>
+  <h1 class="tata"><span class="activedata">Address of the Student:</span>{{SFO.address}}</h1>
+  {% for a in RF %}
+      <h1 class="tata"><span class="activedata">{{SFO.cname}} Coding:</span>{{a.coding}}</h1>
+      <h1 class="tata"><span class="activedata">{{SFO.cname}} Theory:</span>{{a.theory}}</h1>
+      <h1 class="tata"><span class="activedata">{{SFO.cname}} Communication:</span>{{a.comminication}}</h1>
+  {% endfor %}    
+{% endif %}
+    </center>
+
+  <span style="color: white; font-size:30px; background:black; opacity:70%; display:block; padding:10px;">Are you want to change change your password? <a href="{% url 'change_password' %}" id="display" style="padding: 5px; box-shadow:0px 0px 20px rgb(230, 242, 255) ;">Change Password</a> </span>
+
+    
+</body>
+</html>

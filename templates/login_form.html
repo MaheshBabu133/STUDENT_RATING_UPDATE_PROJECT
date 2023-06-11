@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+
+
+    <style>
+
+        body
+        {
+            background: url('{% static 'images/login_form.jpg' %}');
+            background-repeat:no-repeat;
+	        background-size:cover;
+	        background-position:0px 0px ;
+	        background-attachment:fixed;
+        }
+
+        *
+        {
+            margin: 0px;
+        }
+        #loginform
+        {
+            border: 2px solid rgb(255, 255, 255);
+            height: 320px;
+            width:310px;
+            padding: 5px;
+            margin-left: 600px;
+            border-radius: 5px;
+        }
+        label,input
+        {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+            border-radius: 10px;
+            color: rgb(255, 255, 255);
+
+        }
+        input
+        {
+            color: black;
+            background: transparent;
+        }
+
+#one /* h1 */
+{
+      background-color: rgb(190, 190, 190);
+    color: #860808;
+    font-size: 50px;
+    margin: 0px;
+    padding: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    opacity: 80%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+
+
+#two   /*header*/
+{
+    
+    background-color: rgb(190, 237, 255);
+    padding: 20px;
+    opacity: 70%;
+    width: 100%;
+}
+
+#three /* span */
+
+{
+    
+background:rgb(101, 212, 246);
+color: rgb(47, 47, 47);
+padding: 10px;
+border-radius: 0px 10px 0px 10px;
+border: 2px solid rgb(95, 93, 107);
+margin-top: 20px;
+margin-bottom: 20px;
+font-size: 30px;
+box-shadow: -5px -5px 30px whitesmoke;
+margin-top: 500px;
+opacity: 90%;
+
+}  
+
+
+#navbar
+{
+    
+    display: inline;
+    width:100%;
+    margin-left: 750px;
+  
+}
+
+.one  /* anchor tag */
+{
+    flex-direction: center;
+    margin-right: 10px!important;
+    align-content: center;
+    justify-content: center;
+    opacity: 90%!important;
+    box-shadow: 0px 0px 20px rgb(0, 0, 0)!important;
+
+}
+
+
+#display
+{
+background:linear-gradient(30deg,rgb(0, 0, 0),red);
+color:aliceblue;
+font-size: 20px;
+padding:3px;
+border: 2px solid white;
+border-radius: 0px 20px 0px 20px;
+width: 200px;
+box-shadow: 0px 0px 20px whitesmoke;
+margin-bottom: 30px;
+}
+#refuse
+{
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+    padding: 2px;
+    box-shadow: 0px 0px 20px white;
+    margin-left: 280px;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+#forgetpassword
+{
+    color: whitesmoke;
+}
+</style>
+
+
+</head>
+<body>
+<header id="two">
+        <span id="three">J spiders institute</span>
+        <div id="navbar">
+            <a href="{% url 'home' %}" class="temper btn btn-light" >Home</a>
+            <a href="{% url 'welcome' %}" class="temper btn btn-light">welcome</a>
+            <a href="{% url 'register' %}" class="temper btn btn-light">Register</a>
+            
+        </div> 
+    </header>
+
+    
+
+    <center><h1 id="one">Login</h1></center>
+    <center><button onclick="document.getElementById('loginform').style.visibility='visible'" id="display">Click to Login</button></center>
+    
+
+        <div id="loginform" style="visibility: hidden; box-shadow:0px 0px 10px black;">
+            <span id="refuse" onclick="document.getElementById('loginform').style.visibility='hidden'">x</span>
+         <form action="" method="post">
+            {% csrf_token %}
+           
+            <label for="name">name</label>
+            <input type="text" name="name" id="name"><br><br>
+            <label for="pw">password</label>
+            <input type="password" name="pw" id="pw"><br> <br>
+           <input type="submit" id="display" style="margin-left:40px;" value="Submit"><br><br>
+            
+            <span id="forgetpassword">Are you Forget Your Password ?</span>
+            <a href="{% url 'forget_password' %}" style="font-size:20px; text-decoration:underline; color:aliceblue;">ForgetPassword</a>
+        </form>
+
+
+        </div>
+</body>
+</html>

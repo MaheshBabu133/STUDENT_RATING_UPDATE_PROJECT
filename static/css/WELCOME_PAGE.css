@@ -1,0 +1,96 @@
+
+
+#one /* h1 */
+{
+    background-color: rgb(202, 230, 230);
+    color: rgb(0, 1, 9);
+    font-size: 50px;
+    margin: 0px;
+    padding: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    opacity: 60%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#two   /*header*/
+{
+    background-color: rgb(254, 254, 254);
+    padding: 20px;
+    opacity: 70%;
+}
+#three /* span */
+{
+background: rgb(255, 255, 255);
+color: blue;
+padding: 10px;
+border-radius: 0px 10px 0px 10px;
+border: 2px solid blue;
+margin-top: 20px;
+margin-bottom: 20px;
+font-size: 30px;
+box-shadow: -5px -5px 30px whitesmoke;
+margin-top: 500px;
+}  
+
+div
+{
+    width:100%;
+    display: inline;
+    margin-left: 800px;
+  
+}
+
+.one /* anchor tag */
+{
+    flex-direction: center;
+    margin-right: 20px;
+    align-content: center;
+    justify-content: center;
+
+}
+p
+{
+    background-color: rgb(241, 226, 255);
+    font-size: 30px;
+    font-family:sans-serif;
+    opacity: 70%;
+}
+#four
+{
+    border:2px groove red;
+    border-radius: 10px; 
+}
+#five
+{
+
+    margin-top: 20px;
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 60px;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+#six
+{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#seven
+{
+    display: block;
+    font-size: 40px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    background: rgb(218, 238, 210);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 70%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+

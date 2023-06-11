@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="{% static 'css/WELCOME_PAGE.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+
+<style>
+
+body
+{
+    margin: 0px;
+    background-image:url('{% static 'images/na.jpg' %}');
+    background-repeat:no-repeat;
+	background-size:cover;
+	background-position:0px 0px ;
+	background-attachment:fixed;
+}
+
+</style>
+    
+</head>
+<body >
+    <header id="two">
+        <span id="three">J spiders institute</span>
+      
+        <div>
+            <a  class="one btn btn-primary" href="{% url 'home' %}">home</a>
+         
+            <a  class="one btn btn-primary" href="{% url 'user_login' %}">Login</a>
+            <a class="one btn btn-primary" href="{% url 'register' %}">Register</a>
+            
+        </div>
+    </header>
+
+    <center><i><h1 id="one">welcome to Jspiders</h1></i></center>
+   
+
+    <p>
+
+       <i>JSpiders is the world's ace software course training organization with an aim to bridge the gap between the demands of the industry and the curriculum of educational institutions.
+With centers across the Globe, the institute is a platform where young minds are given the opportunity to build successful careers.
+”JSpiders is a place where businesses find talent and dreams take flight."</i>
+    </p>
+    <center><img id="four" src="{% static 'images/JSP.jpeg' %}" alt=""></center>
+    <footer>
+		<h1 id="five">copy rights &copy;:2023</h1>
+		<p id="six">All Rights are reserved</p>
+		<center><small id="seven">Development & Maintained by
+        <a href="{% url 'home' %}" class="btn btn-success">JSpiders</a>
+	</small>
+    </center>
+	</footer>
+</body>
+</html>
+

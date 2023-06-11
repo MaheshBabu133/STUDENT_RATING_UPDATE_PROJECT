@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/register_form.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+    <title>Registration Page</title>
+    <style>
+
+        body
+{
+    margin: 0px;
+    background-image:url('{% static 'images/login_nature.jpg' %}');
+    background-repeat:no-repeat;
+	background-size:cover;
+	background-position:0px 0px ;
+	background-attachment:fixed;
+}
+
+input
+{
+    background-color: aliceblue;
+}
+
+        label
+        {
+            font-size: 30px;
+            color: rgb(255, 255, 255);
+        }
+        input,textarea,select
+        {
+            color: rgb(255, 255, 255)!important;
+            background:transparent;
+            font-size: 30px;
+            border-radius: 10px;
+        }
+        textarea
+        {
+            height: 100px;
+            width: 370px;
+        }
+        option
+        {
+            background-color: black;
+        }
+      
+	</style>
+
+
+</head>
+<body>
+
+
+    <header id="two" >
+        <span id="three">J spiders institute</span>
+         <div>
+            <a href="{% url 'home' %}" class=" one btn btn-outline-dark">Home</a>
+             
+             <a href="{% url 'welcome' %}" class=" one btn btn-outline-dark" style="margin-left: 50px;">welcome</a>
+             </div>
+     </header>
+     <center><h1 id="one">Register Here</h1></center>
+    <center><button onclick="document.getElementById('register').style.visibility='visible'" id="display"> Click to Register</button></center>
+      <center>  <span id="loginspan">Are you already Register?</span><a href="{% url 'user_login' %}" id="loginbtn">Login</a></center>
+      	 
+      
+      
+      
+      <form id='register' onsubmit="return validate()"  method="POST" >
+           <button id="hide" onclick="document.getElementById('register').style.visibility='hidden'">x</button>
+                {% csrf_token %}
+                {{user.as_p}}
+                {{student.as_p}}
+                     
+                    <button type='submit'class='submit-btn'   id="inputag">Submit</button>
+	         </form>
+    </body>
+
+    <script>
+
+
+        function validate()
+        {
+           var username=document.getElementById("id_username").value;
+           var email=document.getElementById("id_email").value;
+           var password=document.getElementById("id_password").value;
+           var regex=/\d/;
+           var regex1=/[a-z]/;
+           var regex2=/\s/;
+           
+          if (regex.test(username) || username.trim()=="" || username.length<4 || regex1.test(username[0]) || regex2.test(username))
+          {
+            document.getElementById("id_username").border="solid red 2px";
+            alert("Your name cannot contain null values \nYour names's first letter must be Capital letter \nYour name can contain atleast 4 characters \n Your name cannot contains the spaces");
+            return false;
+          }
+          else if (email.trim()=="" )
+          {
+            alert("Your email cannot contains the null \nYour email cannot contain spaces");
+            return false;
+          }
+          else if(password.length<7)
+          {
+            alert("Your Password having atlest 6 characters");
+            return false;
+          }
+          else
+          {
+            return true;
+          }
+        }
+    </script>
+</html>
+

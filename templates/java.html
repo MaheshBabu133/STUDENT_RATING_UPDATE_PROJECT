@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Full Stack</title>
+    <link rel="stylesheet" href="{% static 'css/mypython.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+
+
+
+
+
+<style>
+
+
+ 
+    body
+    {
+        margin: 0px;
+        background-image:url('{% static 'images/java.jpg' %}');
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-position:0px 0px ;
+        background-attachment:fixed;
+    }
+    .pli
+{
+    color: rgb(13, 0, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+}
+
+
+.names
+{
+    font-size: 30px;
+    color: rgb(1, 255, 213);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#spone
+{
+    margin-left: 50px;
+}
+#sptwo
+{
+    margin-left: 230px;
+}
+
+#spthree
+{
+    margin-left: 220px;
+}
+#spfour
+{
+    margin-left: 183px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+ 
+
+
+</head>
+<body>
+
+
+    <header id="two" >
+       <span id="three">J spiders institute</span>
+        <div>
+            <a href="{% url 'welcome' %}" class=" one btn btn-dark">welcome</a>
+            <a href="{% url 'home' %}" class=" one btn btn-dark">home</a>
+            <a href="{% url 'register' %}" class=" one btn btn-dark">Register</a>
+            
+        </div>
+    </header>
+    <center><h1 id="one" style="color:blue;">Trainers</h1></center>
+
+
+
+
+    <center class="images">
+   
+    <img src="{% static 'images/raveesh.jpg' %}" alt="image not found">
+     <img src="{% static 'images/abijith.jpg' %}" alt="image not found">
+     <img src="{% static 'images/kishor1.jpg' %}" alt="">
+     <img src="{% static 'images/Greeshma_mam.jpg' %}" alt="image not found">
+    </center>
+
+    <span id="spone" class="names">MR.Raveesh</span>
+    <span id="sptwo" class="names">Mr.Abhijith</span>
+    <span id='spthree'class="names">MR.Kishore</span>
+    <span  id='spfour'class="names">MS.Greeshma Shetty</span> <br>
+
+
+
+    <center><h1 id="cone">Java Full Statck Development</h1></center>
+    <h1 class="apone">Java</h1>
+    <ul>
+        <li class="pli">What is Java?</li>
+        <li class="pli">Why Java?</li>
+        <li class="pli">Core Java?</li>
+        <li class="pli">Advanced Java?</li>
+        <li class="pli">Frame work</li>
+    </ul>
+    <h1 class="apone">SQL</h1>
+
+    <ul>
+        <li class="pli">What is SQL?</li>
+        <li class="pli">How the SQL Uses to you?</li>
+        <li class="pli">Why SQL?</li>
+    </ul>
+
+    <h1 class="apone">Web Technoloy</h1>
+    <ul>
+        <li class="pli" >What is web?</li>
+        <li class="pli">HTML</li>
+        <li class="pli">CSS</li>
+        <li class="pli">Bootstrap</li>
+        <li class="pli">Java Script</li>
+    </ul>
+
+<center>
+    <a href="{% url 'home' %}" class=" one btn btn-dark">GO back to Home page</a>
+ </center>   
+
+</body>
+</html>
+

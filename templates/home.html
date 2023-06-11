@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'css/home_page.css' %}">
+   
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+<style>
+body
+{
+    margin: 0px;
+    background-image:url('{% static 'images/studies.jpg' %}');
+    background-repeat:no-repeat;
+	background-size:cover;
+	background-position:0px 0px ;
+	background-attachment:fixed;
+}
+</style>
+
+</head>
+
+
+<body>
+
+    <header id="two">
+        <span id="three">J spiders institute</span>
+        <div>
+            <a href="{% url 'welcome' %}" class="temper btn btn-light">welcome</a>
+           
+            <a href="{% url 'user_login' %}" class="temper btn btn-light" >Login</a>
+            
+            <a href="{% url 'register' %}" class="temper btn btn-light">Register</a>
+            
+        </div> 
+    </header>
+
+    <h1 id="one"  class="samba" >Jspiders</h1>
+
+
+    <center><h1 id="one">Improve Your Knoweledge Here</h1></center>
+
+
+
+   <center>
+     <img src="{% static 'images/st1.jpg' %}" alt="not image found" height="300px" width="300px">
+    </center>
+
+
+        <center class="eleven">
+            <h2 id="courses">Courses</h2>
+        </center>
+
+
+        <span class="spantag">Just click on below buttons to get complete information</span>
+        <br><br>
+
+        <a href="{% url 'python' %}" class="my"  > <h3 class="btn btn-success btn-rounded  child btn-lg  ">Python Full Statck development</h3></a>
+        <a href="{% url 'java' %}" class="my"><h3 class="btn btn-success btn-rounded  child btn-lg ">Java Full Statck development</h3></a>
+        <a href="{% url 'mern' %}" class="my"> <h3 class="btn btn-success btn-rounded  child btn-lg ">Mern Full Statck development</h3> </a><br><br>
+
+
+
+        <h1 id="contract">Contract US:9611100311/960604019</h>
+    </body>
+
+</html>
