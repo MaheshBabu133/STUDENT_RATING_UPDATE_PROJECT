@@ -188,5 +188,9 @@ margin-bottom: 30px;
  text-decoration: underline;
  background-color: black;
 }
+select
+{
+    width: 370px;
+}
 
 
