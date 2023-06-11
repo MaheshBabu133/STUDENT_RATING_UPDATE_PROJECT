@@ -165,8 +165,9 @@ margin-bottom: 30px;
             <span id="refuse" onclick="document.getElementById('loginform').style.visibility='hidden'">x</span>
          <form action="" method="post">
             {% csrf_token %}
-           
-            <label for="name">name</label>
+            <label for="un">Enter Student name</label>
+            <input type="text" name="un" id="un">
+            <label for="name">Mobile number </label>
             <input type="text" name="name" id="name"><br><br>
             <label for="pw">password</label>
             <input type="password" name="pw" id="pw"><br> <br>

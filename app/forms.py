@@ -6,8 +6,8 @@ from app.models import *
 class UserForm(forms.ModelForm):
     class Meta():
         model=User
-        fields=['username','email','password',]
-
+        fields=['username','email','password']
+        labels={'username':"Mobile number"}
         widgets={'password':forms.PasswordInput()}
 
 

@@ -18,11 +18,15 @@ class Qualification(models.Model):
         return self.HighestQualification
 
 class StudentData(models.Model):
+    Name=models.CharField(max_length=50,default="maha")
     username=models.OneToOneField(User,on_delete=models.CASCADE)
     cname=models.ForeignKey(Course,on_delete=models.CASCADE)
     YOP=models.ForeignKey(Year,on_delete=models.CASCADE)
     HighestQualification=models.ForeignKey(Qualification,on_delete=models.Model)
     address=models.TextField()
+    def __str__(self):
+        return self.Name
+    
 
 
 class Theory(models.Model):

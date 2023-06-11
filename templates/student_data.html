@@ -133,13 +133,14 @@ opacity: 100;
      {% endif %}
           </div>
  </header>
- <center><h1 id="one">Welcome  mr/ms {{username}}</h1></center>
+ 
 {% if user.username == 'Harshad' %}
+  <center><h1 id="one">Welcome  mr/ms {{username}}</h1></center>
   <div id="formdiv">
   <form action="" method="POST" id="update">
     {% csrf_token %}
    
-    <label for="username">Enter Username</label>
+    <label for="username">Enter Mobile number:</label>
     <input type="text" name="username" id="username" placeholder="Enter StudentName" >
     <label for="course">Select Your Course:</label>
     <select name="course" id="course">
@@ -179,20 +180,14 @@ opacity: 100;
         {% endfor %}
     </select>
 
-
-
-
-
-
-
     <br><br>
     <input type="submit" id="display" value="Submit">
   </form>
   </div>
 
 {% else %}
-
-  <h1 class="tata"><span class="activedata">Name of the Student:</span>{{UFO.username}}</h1>
+<h1 class="tata"><span class="activedata">Name of the Student:</span>{{SFO.Name}}</h1>
+  <h1 class="tata"><span class="activedata">Mobile number  of the Student:</span>{{UFO.username}}</h1>
   <h1 class="tata"><span class="activedata">Email of the Student:</span>{{UFO.email}}</h1>
   <h1 class="tata"><span class="activedata">Couse of the Student:</span>{{SFO.cname}}</h1>
   <h1 class="tata"><span class="activedata">Quaification of the Student:</span>{{SFO.HighestQualification}}</h1>
