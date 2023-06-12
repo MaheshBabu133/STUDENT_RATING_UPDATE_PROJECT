@@ -47,6 +47,10 @@ def register(request):
     return render(request,'register.html',d)
 
 
+
+
+#For HR login with Name:Harshad Mobile number:Harshad Passoword:1234 Then only you get the Student Rating update Form
+
 def user_login(request):
 
 
